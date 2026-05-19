@@ -44,17 +44,20 @@ def check_product_size(product_id: int, size_label: str) -> Union[dict, str]:
         return f"Erro: falha inesperada na validacao ({error})."
 
 
-# casos de sucesso
+# ----- casos de sucesso -----
+print("----- CASOS DE SUCESSO -----")
 print(check_product_size(product_id=101, size_label="P"))
 print(check_product_size(product_id=102, size_label="GG"))
 print(check_product_size(product_id=103, size_label="XG"))
 
-# casos com espacos e letras minusculas
+# ----- casos com espacos e letras minusculas -----
+print("\n----- CASOS COM ESPACOS E LETRAS MINUSCULAS -----")
 print(check_product_size(product_id=201, size_label=" g "))
 print(check_product_size(product_id=202, size_label="xg"))
 print(check_product_size(product_id=203, size_label="  m  "))
 
-# casos de erro
+# ----- casos de erro -----
+print("\n----- CASOS DE ERRO -----")
 print(check_product_size(product_id=301, size_label="XXG"))
 print(check_product_size(product_id=302, size_label="K"))
 print(check_product_size(product_id=303, size_label=""))
